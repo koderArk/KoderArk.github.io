@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+        background-color:#111318;
+    }
+
+    div#tag {
+        position:absolute;
+        left:30%;
+        top:25%;
+    }
+    h2{
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: bold;
+        font-size: 2rem;
+        text-transform: uppercase;
+        text-align: center;
+        color: whitesmoke;
+    }
+</style>
+<body>
+    <h2>Skills.</h2>
+    <div id="tag"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="Js/spherescript.js"></script>
+    <script>
+        $(document).ready(function () {
+            var entries = [
+                { label : 'HTML'},
+                { label : 'CSS'},
+                { label : 'JAVASCRIPT'},
+                { label : 'JAVA'},
+                { label : 'C'},
+                { label : 'C++'},
+                { label : 'PYTHON'},
+                { label : 'JQUERY'},
+            ];
+            
+            var settings = {
+               entries : entries,
+               width:640,
+               height:480,
+               radius:'80%',
+               radiusMin:75,
+               bgDraw:true,
+               bgcolor:'Red',
+               fontColor:'#3b66d4',
+               fontSize:'40',
+               fontWeight: '400',
+               fontFamily:'Courier, Arial, sans-serif',
+               opacityOver:1.00,
+               opacityOut:0.05,
+               opacitySpeed:6,
+               fov:800,
+               speed:1
+           }
+
+           $('#tag').svg3DTagCloud(settings);
+
+          
+        })
+
+           
+    </script>
+
+</body>
+</html>
