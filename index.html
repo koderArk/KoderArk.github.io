@@ -1,3 +1,38 @@
+<!-- <?php
+$insert = false;
+
+if(isset($_POST['name'])){
+
+$db = 'localhost';
+$user = 'root';
+$pass = '';
+
+
+$con = mysqli_connect($db, $user, $pass);
+
+if(!$con){
+   die("unable to connect" . mysqli_connect_error());   
+} 
+
+//echo "Great Mate";
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
+
+$sql = "INSERT INTO `data`.`datalog` (`Name`, `Email`, `Message`) VALUES ('$name','$email','$message');";
+//echo $sql;
+
+if($con->query($sql) == true){
+    //echo "successfully inserted";
+    $insert = true;
+}
+else{
+    echo "ERROR: $sql <br> $con->error";
+}
+$con->close();
+}
+?> -->
 <!Doctype html>
 <html lang="en" dir="ltr">
 <head>
@@ -338,43 +373,6 @@
 			<p class="refer">Handcrafted by me ©2021 Arvind Khichar</p>
 			
 		</footer>
-		<!-- <?php
-$insert = false;
-
-if(isset($_POST['name'])){
-
-$db = 'localhost';
-$user = 'root';
-$pass = '';
-
-
-$con = mysqli_connect($db, $user, $pass);
-
-if(!$con){
-   die("unable to connect" . mysqli_connect_error());   
-} 
-
-//echo "Great Mate";
-
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
-
-$sql = "INSERT INTO `data`.`datalog` (`Name`, `Email`, `Message`) VALUES ('$name','$email','$message');";
-//echo $sql;
-
-if($con->query($sql) == true){
-    //echo "successfully inserted";
-    $insert = true;
-}
-else{
-    echo "ERROR: $sql <br> $con->error";
-}
-$con->close();
-}
-?> -->
-
 	</div>
-	
 </body>
 </html>
